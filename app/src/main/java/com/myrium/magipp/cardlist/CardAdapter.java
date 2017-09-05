@@ -1,11 +1,13 @@
 package com.myrium.magipp.cardlist;
 
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.myrium.magipp.R;
 import com.myrium.magipp.model.Card;
 
@@ -48,6 +50,10 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder>{
         holder.name.setText(card.getName());
         holder.cost.setText(card.getManaCost());
         holder.text.setText(card.getText());
+
+        SimpleDraweeView imageCard = holder.itemView.
+                findViewById(R.id.imageView_card_cell);
+        imageCard.setImageURI(Uri.parse(card.getImageUrl()));
     }
 
     @Override
