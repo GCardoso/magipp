@@ -41,48 +41,39 @@
                 android:layout_width="182dp"
                 android:layout_height="21dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:singleLine="false"
                 android:text="Akroma, Angel of Wrath"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/imageView_card_cell"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView_card_cell"
                 app:layout_constraintVertical_bias="0.2"/>
 
             <TextView
-                android:id="@+id/text"
-                android:layout_width="294dp"
-                android:layout_height="26dp"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:textSize="12sp"
-                app:layout_constraintLeft_toLeftOf="@+id/name"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintRight_toRightOf="@+id/cost"
-                card_view:layout_editor_absoluteX="65dp"/>
-
-            <TextView
                 android:id="@+id/cost"
-                android:layout_width="111dp"
-                android:layout_height="22dp"
-                android:layout_marginBottom="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:singleLine="false"
                 android:text="5WWW"
                 android:textAlignment="textEnd"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/name"
-                app:layout_constraintHorizontal_bias="0.384"
-
+                app:layout_constraintHorizontal_bias="0.378"
                 app:layout_constraintLeft_toRightOf="@+id/name"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/name"/>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Legendary Creature - Angel"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_card_cell"
+                app:layout_constraintLeft_toRightOf="@+id/imageView_card_cell"
+                />
         </android.support.constraint.ConstraintLayout>
 
 

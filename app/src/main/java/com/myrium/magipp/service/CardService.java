@@ -5,6 +5,7 @@ import com.myrium.magipp.model.CardsResponse;
 
 import retrofit.http.GET;
 import retrofit.http.Path;
+import retrofit.http.Query;
 import rx.Observable;
 
 
@@ -19,5 +20,5 @@ public interface CardService {
     Observable<Card> getCard(@Path("id") String id);
 
     @GET("/cards")
-    Observable<CardsResponse> getCards();
+    Observable<CardsResponse> getCards(@Query("page") int page, @Query("orderBy") String order);
 }

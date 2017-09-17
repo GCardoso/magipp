@@ -403,4 +403,20 @@ public class Card {
     public void setRulings(Ruling[] rulings) {
         this.rulings = rulings;
     }
+
+    public String getTypeSubtype() {
+        StringBuilder types = new StringBuilder();
+
+        for (String type : this.types) {
+            types.append(type).append(" ");
+        }
+        if (this.subtypes != null && this.subtypes.length > 0) {
+            types.append("- ");
+            for (String subType : this.subtypes) {
+                types.append(subType).append(" ");
+            }
+        }
+
+        return types.toString();
+    }
 }
